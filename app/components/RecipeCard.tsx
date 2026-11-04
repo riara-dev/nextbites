@@ -8,9 +8,6 @@ export default function RecipeCard({ recipe }: { recipe: Recipe }) {
       href={`/recipes/${recipe.id}`}
       aria-label={`View ${recipe.title} recipe`}
     >
-      <div className={`recipe-art recipe-art-${recipe.id}`} aria-hidden="true">
-        <span>{recipe.emoji}</span>
-      </div>
       <div className="recipe-card-content">
         <h2>{recipe.title}</h2>
         <p className="recipe-description">{recipe.description}</p>
@@ -22,9 +19,12 @@ export default function RecipeCard({ recipe }: { recipe: Recipe }) {
             </svg>
             {recipe.minutes} min
           </span>
-          <span>{recipe.difficulty}</span>
+          <span className="difficulty-pill">{recipe.difficulty}</span>
           <span className="cuisine-pill">{recipe.cuisine}</span>
         </div>
+      </div>
+      <div className={`recipe-art recipe-art-${recipe.id}`} aria-hidden="true">
+        <span>{recipe.emoji}</span>
       </div>
     </Link>
   );

@@ -67,7 +67,7 @@ async function RecipeContent({ params }: RecipePageProps) {
         </section>
         <section className="instruction-section">
           <p className="eyebrow">Let’s make it</p>
-          <h2>Method</h2>
+          <h2>Instructions</h2>
           <ol className="method-list">
             {recipe.method.map((step) => (
               <li key={step}>{step}</li>
