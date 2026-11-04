@@ -3,14 +3,15 @@ import RecipeGrid from "./components/RecipeGrid";
 
 export default function Home() {
   return (
-    <main className="home">
+    <main className="home-page">
       <section className="hero">
+        <p className="eyebrow">Good food, made simple</p>
         <h1>
-          Find your next <span className="hl">bite</span>.
+          Find your next <span className="highlight">bite.</span>
         </h1>
-        <p>
-          {recipes.length} recipes to browse, search, and cook. Pick one and
-          get the full method.
+        <p className="hero-description">
+          {recipes.length} recipes to browse, search, and cook. Pick one and get
+          the full method.
         </p>
       </section>
       <RecipeGrid recipes={recipes} />
